@@ -4,6 +4,7 @@ from flask import render_template, request, url_for, jsonify
 from flask_sockets import Sockets
 
 app = Flask(__name__)
+app.config['JSON_AS_ASCII'] = False
 
 @app.route('/')
 def index():
