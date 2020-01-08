@@ -1,4 +1,4 @@
-from logging import Formatter, getLogger, StreamHandler, handlers
+from logging import Formatter, getLogger, handlers
 from logging import DEBUG
 
 import inspect
@@ -9,7 +9,6 @@ class Logger:
         abs_path = inspect.stack()[0][1]
         save_log_path = '/'.join(abs_path.split('/')[:-1])
         self.logger = getLogger(n)
-        handler = StreamHandler()
         self.logger.setLevel(DEBUG)
         handler = handlers.RotatingFileHandler(
             filename=os.path.join(save_log_path, log_file),
