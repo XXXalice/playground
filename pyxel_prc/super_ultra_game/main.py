@@ -13,16 +13,7 @@ class App:
 
     def draw(self):
         pyxel.cls(12)
-        pyxel.blt(
-            x=self.player.x,
-            y=self.player.y,
-            img=0,
-            u=0,
-            v=0,
-            w=16,
-            h=16,
-            colkey=0
-        )
+        self.player.draw_player()
         self._draw_player_xy()
 
     def _draw_player_xy(self):
@@ -32,6 +23,5 @@ class App:
             s='x:{} y:{}'.format(self.player.x, self.player.y),
             col=10
         )
-
 
 App()
