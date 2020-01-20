@@ -51,6 +51,7 @@ class Player:
         bullet_id = len(self.bullets)
         b = Bullet(token_id=bullet_id, x=self.x, y=self.y)
         self.bullets.append(b)
+        print(len(self.bullets))
 
 
 class Bullet:
@@ -77,6 +78,7 @@ class Bullet:
             h=16,
             colkey=0
         )
+
 
     def bullet_remove(self):
         """

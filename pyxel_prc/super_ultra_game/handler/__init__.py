@@ -1,0 +1,2 @@
+FIELD_X = 160
+FIELD_Y = 120
