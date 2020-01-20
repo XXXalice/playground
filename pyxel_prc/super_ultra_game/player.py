@@ -13,7 +13,6 @@ class Player:
         self.bullets = []
         self.log.debug('init games.')
 
-
     def update_player(self):
         if pyxel.btn(pyxel.KEY_A):
             self.x = self.x - 2
@@ -26,6 +25,10 @@ class Player:
 
         if pyxel.btnr(pyxel.KEY_SPACE):
             self.shoot_bullet()
+
+        if self.bullets:
+            for b in self.bullets:
+                b.update_bullet()
 
     def draw_player(self):
         pyxel.blt(
@@ -40,9 +43,8 @@ class Player:
         )
         if self.bullets:
             for b in self.bullets:
-                b.bullet_render()
-
-
+                b.diff_x = 1
+                b.draw_bullet()
 
     def shoot_bullet(self):
         self.log.debug('shoot!')
@@ -51,23 +53,20 @@ class Player:
         self.bullets.append(b)
 
 
-
 class Bullet:
     def __init__(self, token_id, x, y):
         self.token_id = token_id
         self.x = x
         self.y = y
+        self.active = True
+        self.diff_x = 0
+        self.diff_y = 0
 
-        # try:
-        #     self.bullet_render()
-        # except:
-        #     self.bullet_remove()
+    def update_bullet(self):
+        self.x += self.diff_x
+        self.y += self.diff_y
 
-    def bullet_render(self):
-        """
-        弾の起動描画
-        :return:
-        """
+    def draw_bullet(self):
         pyxel.blt(
             x=self.x,
             y=self.y,
