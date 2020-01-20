@@ -1,5 +1,6 @@
 import pyxel
 from handler.logger import Logger
+from handler import FIELD_X, FIELD_Y
 
 class Player:
     def __init__(self, name='shamiko', age=32):
@@ -28,7 +29,10 @@ class Player:
 
         if self.bullets:
             for b in self.bullets:
+                b.diff_x = 1
                 b.update_bullet()
+                if not b.active:
+                    self.bullets.remove(b)
 
     def draw_player(self):
         pyxel.blt(
@@ -43,7 +47,6 @@ class Player:
         )
         if self.bullets:
             for b in self.bullets:
-                b.diff_x = 1
                 b.draw_bullet()
 
     def shoot_bullet(self):
@@ -51,7 +54,9 @@ class Player:
         bullet_id = len(self.bullets)
         b = Bullet(token_id=bullet_id, x=self.x, y=self.y)
         self.bullets.append(b)
-        print(len(self.bullets))
+        print(self.bullets)
+        print([b.token_id for b in self.bullets])
+
 
 
 class Bullet:
@@ -66,6 +71,8 @@ class Bullet:
     def update_bullet(self):
         self.x += self.diff_x
         self.y += self.diff_y
+        if self.x >= FIELD_X or self.y >= FIELD_Y:
+            self.active = False
 
     def draw_bullet(self):
         pyxel.blt(
@@ -78,11 +85,3 @@ class Bullet:
             h=16,
             colkey=0
         )
-
-
-    def bullet_remove(self):
-        """
-        弾のトリガー発生時の消去
-        :return:
-        """
-        pass
