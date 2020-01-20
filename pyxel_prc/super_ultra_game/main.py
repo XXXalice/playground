@@ -1,9 +1,10 @@
 import player
 import pyxel
+from handler import FIELD_X, FIELD_Y
 
 class App:
     def __init__(self):
-        pyxel.init(width=160, height=120, caption='test')
+        pyxel.init(width=FIELD_X, height=FIELD_Y, caption='test')
         pyxel.load('./super.pyxel')
         self.player = player.Player()
         pyxel.run(self.update, self.draw)

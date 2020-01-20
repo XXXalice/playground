@@ -342,3 +342,143 @@
 2020-01-20 15:36:09,515 - handler.logger - DEBUG : shoot!
 2020-01-20 15:36:09,591 - handler.logger - DEBUG : shoot!
 2020-01-20 15:36:09,715 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:04,299 - handler.logger - DEBUG : init games.
+2020-01-20 16:20:05,667 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:06,774 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:07,735 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:08,002 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:08,202 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:08,368 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:08,568 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:08,778 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:08,967 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:11,935 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:12,102 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:12,302 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:12,468 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:12,768 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:16,168 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:16,335 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:16,535 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:16,702 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:16,868 - handler.logger - DEBUG : shoot!
+2020-01-20 16:20:17,002 - handler.logger - DEBUG : shoot!
+2020-01-20 16:33:50,288 - handler.logger - DEBUG : init games.
+2020-01-20 16:33:54,190 - handler.logger - DEBUG : shoot!
+2020-01-20 16:33:54,961 - handler.logger - DEBUG : shoot!
+2020-01-20 16:38:05,782 - handler.logger - DEBUG : init games.
+2020-01-20 16:38:08,454 - handler.logger - DEBUG : shoot!
+2020-01-20 16:38:08,953 - handler.logger - DEBUG : shoot!
+2020-01-20 16:47:05,673 - handler.logger - DEBUG : init games.
+2020-01-20 16:47:07,475 - handler.logger - DEBUG : shoot!
+2020-01-20 16:47:08,775 - handler.logger - DEBUG : shoot!
+2020-01-20 16:47:42,513 - handler.logger - DEBUG : init games.
+2020-01-20 16:47:45,285 - handler.logger - DEBUG : shoot!
+2020-01-20 16:47:46,084 - handler.logger - DEBUG : shoot!
+2020-01-20 16:48:37,906 - handler.logger - DEBUG : init games.
+2020-01-20 16:48:39,478 - handler.logger - DEBUG : shoot!
+2020-01-20 16:48:45,478 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:05,330 - handler.logger - DEBUG : init games.
+2020-01-20 16:49:06,831 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:09,432 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:11,864 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:16,597 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:16,765 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:16,965 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:17,098 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:17,365 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:17,532 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:18,432 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:18,597 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:18,764 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:18,965 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:19,132 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:19,298 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:32,176 - handler.logger - DEBUG : init games.
+2020-01-20 16:49:35,378 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:36,611 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:37,846 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:41,278 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:41,446 - handler.logger - DEBUG : shoot!
+2020-01-20 16:49:41,611 - handler.logger - DEBUG : shoot!
+2020-01-20 17:02:36,293 - handler.logger - DEBUG : init games.
+2020-01-20 17:02:39,328 - handler.logger - DEBUG : shoot!
+2020-01-20 17:02:40,328 - handler.logger - DEBUG : shoot!
+2020-01-20 17:02:40,728 - handler.logger - DEBUG : shoot!
+2020-01-20 17:08:46,664 - handler.logger - DEBUG : init games.
+2020-01-20 17:08:49,840 - handler.logger - DEBUG : shoot!
+2020-01-20 17:09:11,896 - handler.logger - DEBUG : init games.
+2020-01-20 17:09:13,597 - handler.logger - DEBUG : shoot!
+2020-01-20 17:15:58,558 - handler.logger - DEBUG : init games.
+2020-01-20 17:16:03,593 - handler.logger - DEBUG : shoot!
+2020-01-20 17:16:17,659 - handler.logger - DEBUG : shoot!
+2020-01-20 17:16:19,492 - handler.logger - DEBUG : shoot!
+2020-01-20 17:16:54,527 - handler.logger - DEBUG : init games.
+2020-01-20 17:16:56,899 - handler.logger - DEBUG : shoot!
+2020-01-20 17:16:57,828 - handler.logger - DEBUG : shoot!
+2020-01-20 17:16:58,628 - handler.logger - DEBUG : shoot!
+2020-01-20 17:19:38,489 - handler.logger - DEBUG : init games.
+2020-01-20 17:19:41,122 - handler.logger - DEBUG : shoot!
+2020-01-20 17:19:41,759 - handler.logger - DEBUG : shoot!
+2020-01-20 17:19:42,290 - handler.logger - DEBUG : shoot!
+2020-01-20 17:21:22,828 - handler.logger - DEBUG : init games.
+2020-01-20 17:21:28,900 - handler.logger - DEBUG : shoot!
+2020-01-20 17:21:30,429 - handler.logger - DEBUG : shoot!
+2020-01-20 17:23:54,953 - handler.logger - DEBUG : init games.
+2020-01-20 17:23:56,725 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:01,455 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:08,825 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:10,255 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:10,525 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:16,355 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:16,555 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:16,725 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:16,888 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:19,788 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:20,055 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:20,188 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:20,355 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:20,589 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:20,755 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:21,025 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:21,488 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:21,689 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:21,888 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:22,488 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:23,025 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:23,255 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:23,454 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:23,725 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:23,988 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:24,225 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:24,425 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:24,655 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:24,888 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:25,125 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:25,288 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:25,455 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:25,655 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:25,825 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:25,988 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:26,189 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:26,388 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:26,888 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:27,088 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:27,288 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:27,488 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:27,655 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:27,825 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:27,988 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:28,155 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:28,325 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:28,525 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:28,725 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:29,155 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:29,354 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:29,525 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:29,725 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:29,955 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:30,188 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:30,387 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:30,625 - handler.logger - DEBUG : shoot!
+2020-01-20 17:24:37,688 - handler.logger - DEBUG : shoot!
