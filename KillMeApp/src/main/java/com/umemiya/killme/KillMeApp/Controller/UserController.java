@@ -6,8 +6,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.*;
+
 @RestController
 public class UserController {
+
+    FileInputStream fi = null;
+    InputStreamReader is = null;
+    BufferedReader reader = null;
 
     @RequestMapping("/")
     public String index() {
@@ -33,6 +39,22 @@ public class UserController {
     }
 
     private UserItem _generateUserSeed() {
-
+        try {
+            try {
+                fi = new FileInputStream("./items/nameSeeds.csv");
+            } catch (FileNotFoundException ex) {
+                ex.printStackTrace();
+            }
+            is = new InputStreamReader(fi);
+            reader = new BufferedReader(is);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                reader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
