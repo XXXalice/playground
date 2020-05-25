@@ -47,6 +47,9 @@ public class UserController {
             }
             is = new InputStreamReader(fi);
             reader = new BufferedReader(is);
+
+            String[] cols = reader.readLine().split(",");
+
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
