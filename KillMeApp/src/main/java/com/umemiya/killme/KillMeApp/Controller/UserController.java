@@ -1,6 +1,7 @@
 package com.umemiya.killme.KillMeApp.Controller;
 
 
+import com.umemiya.killme.KillMeApp.Controller.items.UserItem;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,5 +23,16 @@ public class UserController {
             result += i;
         }
         return "total: " + String.valueOf(result);
+    }
+
+    @RequestMapping("/{id}")
+    public UserItem find(
+            @PathVariable int id
+    ) {
+
+    }
+
+    private UserItem _generateUserSeed() {
+
     }
 }
