@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.*;
+import java.util.Random;
 
 @RestController
 public class UserController {
@@ -15,6 +16,7 @@ public class UserController {
     InputStreamReader is = null;
     BufferedReader reader = null;
     Boolean initFlag = false;
+    int csvLineNum = 0;
 
     @RequestMapping("/")
     public String index() {
@@ -53,6 +55,10 @@ public class UserController {
                 }
                 is = new InputStreamReader(fi);
                 reader = new BufferedReader(is);
+
+                while(reader.readLine() != null) {
+                    csvLineNum++;
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -71,8 +77,24 @@ public class UserController {
             _streamInit(0);
             initFlag = true;
         }
+
+        int seedInt = new Random().nextInt(csvLineNum + 1);
         try {
             String[] cols = reader.readLine().split(",");
+            String line = "";
+            int counter = 0;
+            while((line = reader.readLine()) != null) {
+                counter++;
+                if (counter == seedInt) {
+                    String[] items = line.split(",");
+                    UserItem result = new UserItem(
+                            csvLineNum,
+                            items[0],
+                            items[2]
+                            );
+                    return result;
+                }
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
