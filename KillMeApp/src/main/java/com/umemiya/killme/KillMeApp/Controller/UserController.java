@@ -14,6 +14,7 @@ public class UserController {
     FileInputStream fi = null;
     InputStreamReader is = null;
     BufferedReader reader = null;
+    Boolean initFlag = false;
 
     @RequestMapping("/")
     public String index() {
@@ -38,26 +39,42 @@ public class UserController {
 
     }
 
-    private UserItem _generateUserSeed() {
-        try {
+    /**
+     * stream関連を初期化
+     * @param operate 0で初期化処理 1でclose処理
+     */
+    private void _streamInit(int operate) {
+        if (operate == 0) {
             try {
-                fi = new FileInputStream("./items/nameSeeds.csv");
-            } catch (FileNotFoundException ex) {
-                ex.printStackTrace();
+                try {
+                    fi = new FileInputStream("./items/nameSeeds.csv");
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+                is = new InputStreamReader(fi);
+                reader = new BufferedReader(is);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            is = new InputStreamReader(fi);
-            reader = new BufferedReader(is);
-
-            String[] cols = reader.readLine().split(",");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
+        } else {
             try {
                 reader.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+
+    }
+
+    private UserItem _generateUserSeed() {
+        if (!initFlag) {
+            _streamInit(0);
+            initFlag = true;
+        }
+        try {
+            String[] cols = reader.readLine().split(",");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
