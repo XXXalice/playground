@@ -2,101 +2,92 @@ package com.umemiya.killme.KillMeApp.Controller;
 
 
 import com.umemiya.killme.KillMeApp.Controller.items.UserItem;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 @RestController
 public class UserController {
 
-    FileInputStream fi = null;
-    InputStreamReader is = null;
+    FileReader fr = null;
     BufferedReader reader = null;
     Boolean initFlag = false;
     int csvLineNum = 0;
+    List<UserItem> userItems = new ArrayList<>();
+
+    @Autowired
+    ResourceLoader resourceLoader;
 
     @RequestMapping("/")
     public String index() {
         return "Hello.";
     }
 
-    @RequestMapping("/{num}")
-    public String numTest(
-            @PathVariable int num
-    ) {
-        int result = 0;
-        for (int i = 1; i <= num; i++) {
-            result += i;
-        }
-        return "total: " + String.valueOf(result);
-    }
 
     @RequestMapping("/{id}")
     public UserItem find(
             @PathVariable int id
     ) {
-
+        _streamInit();
+        try {
+            return userItems.get(id);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return userItems.get(0);
+        }
     }
 
     /**
      * stream関連を初期化
-     * @param operate 0で初期化処理 1でclose処理
      */
-    private void _streamInit(int operate) {
-        if (operate == 0) {
+    private void _streamInit() {
             try {
                 try {
-                    fi = new FileInputStream("./items/nameSeeds.csv");
+                    String filepath = "nameSeed.csv";
+                    Resource resource = resourceLoader.getResource("classpath:" + filepath);
+                    this.fr = new FileReader(resource.getFile());
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
-                is = new InputStreamReader(fi);
-                reader = new BufferedReader(is);
-
-                while(reader.readLine() != null) {
+                reader = new BufferedReader(this.fr);
+                String line = "";
+                while((line = reader.readLine()) != null) {
                     csvLineNum++;
+                    String[] cols = line.split(",");
+                    UserItem userItem = new UserItem(
+                            csvLineNum,
+                            cols[0],
+                            cols[1]
+                            );
+                    userItems.add(userItem);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } else {
             try {
                 reader.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }
 
     }
 
     private UserItem _generateUserSeed() {
         if (!initFlag) {
-            _streamInit(0);
+            _streamInit();
             initFlag = true;
         }
 
-        int seedInt = new Random().nextInt(csvLineNum + 1);
-        try {
-            String[] cols = reader.readLine().split(",");
-            String line = "";
-            int counter = 0;
-            while((line = reader.readLine()) != null) {
-                counter++;
-                if (counter == seedInt) {
-                    String[] items = line.split(",");
-                    UserItem result = new UserItem(
-                            csvLineNum,
-                            items[0],
-                            items[2]
-                            );
-                    return result;
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        int seedInt = new Random().nextInt(csvLineNum);
+
+        return userItems.get(seedInt);
     }
 }
