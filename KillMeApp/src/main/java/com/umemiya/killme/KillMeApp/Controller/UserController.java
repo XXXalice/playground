@@ -26,10 +26,10 @@ public class UserController {
     @Autowired
     ResourceLoader resourceLoader;
 
-//    @RequestMapping("/")
-//    public String index() {
-//        return "Hello.";
-//    }
+    @RequestMapping("/")
+    public String index() {
+        return "Hello.";
+    }
 
 
     @RequestMapping("/{id}")
