@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-@RestController("user/")
+@RestController("/user")
 public class UserController {
 
     FileReader fr = null;
@@ -26,10 +26,10 @@ public class UserController {
     @Autowired
     ResourceLoader resourceLoader;
 
-    @RequestMapping("/")
-    public String index() {
-        return "Hello.";
-    }
+//    @RequestMapping("/")
+//    public String index() {
+//        return "Hello.";
+//    }
 
 
     @RequestMapping("/{id}")
