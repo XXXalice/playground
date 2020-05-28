@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-@RestController("user/")
+@RestController("/user")
 public class UserController {
 
     FileReader fr = null;
