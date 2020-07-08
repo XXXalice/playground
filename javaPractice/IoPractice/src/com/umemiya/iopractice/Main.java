@@ -4,7 +4,7 @@ import java.io.*;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class IoPractice {
+public class Main {
     public static void main(String[] args) {
         String CSV_DIR = "csv";
         try {
