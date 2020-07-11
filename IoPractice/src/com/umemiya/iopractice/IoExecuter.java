@@ -82,16 +82,16 @@ public class IoExecuter {
      */
     private static Map<String, Integer> paymentItems(String order) {
         String[] items = order.split(" ", 0);
-        int count = 0;
         Map<String, Integer> buyList = new HashMap<>();
         for (String item: items) {
-            buyList.put(item, count);
+            buyList.put(item, 0);
         }
 
         for (String item: items) {
             // 商品一覧に購入商品が含まれているか
             if (itemList.containsKey(item)) {
-                buyList.replace(item, count++);
+                int count = buyList.get(item) + 1;
+                buyList.replace(item, count);
             }
         }
         return buyList;
