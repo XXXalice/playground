@@ -63,9 +63,16 @@ public class IoExecuter {
     /**
      * 合計金額の合算
      *
+     * @param buyList
      * @return 合計金額
      */
-    public int calcSumPrice() {
-
+    public int calcSumPrice(Map<String, Integer> buyList) {
+        int sumPrice = 0;
+        int itemNum;
+        for (String buyItem: buyList.keySet()) {
+            itemNum = buyList.get(buyItem);
+            sumPrice += itemList.get(buyItem) * itemNum;
+        }
+        return sumPrice;
     }
 }
