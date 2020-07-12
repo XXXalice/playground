@@ -1,6 +1,6 @@
 package com.umemiya.bufferpractice;
 
-import java.util.List;
+import java.util.HashMap;
 import java.util.Map;
 
 public class TokenCreater {
@@ -8,25 +8,29 @@ public class TokenCreater {
     /**
      * ストリングバッファ
      */
-    private static StringBuffer sb;
+    private static StringBuffer tokenSb = new StringBuffer();
 
     /**
      * token格納マップ
      */
-    private static Map<Integer, String> tokens;
+    private static Map<Integer, String> tokens = new HashMap<>();
+
+    /**
+     * tokenizer
+     */
+    private static RandomWordMaker tokenizer = new RandomWordMaker(5);
+
 
     /**
      * メイン関数
+     *
      * @param args
      */
     public static void main(String[] args) {
-        RandomWordMaker tokenizer = new RandomWordMaker(5);
-
-        int[] range = new int[50];
+        int[] range = new int[10];
         for (int iter: range) {
-            sb.append(tokenizer.makeToken());
-            tokens.put(iter, sb.toString());
-            sb.setLength(0);
+            tokenSb.append(tokenizer.makeToken());
+            tokenSb.setLength(0);
         }
 
     }

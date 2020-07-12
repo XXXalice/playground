@@ -44,13 +44,16 @@ public class RandomWordMaker {
      *
      * @return token文字列
      */
-    static String makeToken() {
+    public String makeToken() {
         Random rnd = new Random();
         StringBuffer sb = new StringBuffer();
+        int rndNum;
         for (int i = 0; i < wordMem.length; i++) {
-            sb.append(rnd.nextInt(MAKE_RANGE));
+            rndNum = rnd.nextInt(MAKE_RANGE);
+            sb.append(rndNum);
         }
-        return sb.toString();
+        String token = sb.toString();
+        return token;
     }
 
 }
