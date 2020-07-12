@@ -3,17 +3,13 @@ package com.umemiya.bufferpractice;
 import java.util.Random;
 
 /**
- * todo: コンストラクタから文字数を変更できるようにしたい
  * ランダムなトークン文字列（数値のみ）を生成するクラス
  *
  * @author umemiya
  */
 public class RandomWordMaker {
 
-    /**
-     * 文字数
-     */
-    private static int tokenLength;
+
 
     /**
      * nextInt()で使用する乱数範囲（必ず1桁になる）
@@ -21,19 +17,16 @@ public class RandomWordMaker {
     private static final int MAKE_RANGE = 10;
 
     /**
-     * 5文字固定
      * メモリ領域確保
      */
     private static String[] wordMem;
 
     /**
      * ========コンストラクタ========
-     * todo:　上に則る
      *
-     * @param tokenLength
+     * @param tokenLength tokenの長さ
      */
     public RandomWordMaker(int tokenLength) {
-        this.tokenLength = tokenLength;
         wordMem = new String[tokenLength];
     }
 
@@ -57,16 +50,5 @@ public class RandomWordMaker {
         return token;
     }
 
-    /**
-     * テスト
-     * @param args
-     */
-    public static void main(String[] args) {
-        RandomWordMaker randomWordMaker = new RandomWordMaker(5);
-
-        System.out.println(wordMem.length);
-        String token = randomWordMaker.makeToken();
-        System.out.println(token);
-    }
 
 }
