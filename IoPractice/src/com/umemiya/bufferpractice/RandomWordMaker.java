@@ -24,7 +24,7 @@ public class RandomWordMaker {
      * 5文字固定
      * メモリ領域確保
      */
-    private static String[] wordMem = new String[5];
+    private static String[] wordMem = new String[tokenLength];
 
     /**
      * ========コンストラクタ========
@@ -44,7 +44,7 @@ public class RandomWordMaker {
      *
      * @return token文字列
      */
-    public static String makeToken() {
+    static String makeToken() {
         Random rnd = new Random();
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < wordMem.length; i++) {
