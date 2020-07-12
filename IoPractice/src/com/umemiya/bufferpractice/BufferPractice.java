@@ -15,6 +15,9 @@ public class BufferPractice {
         String str2 = sb.append("a").toString();
         System.out.println(str2);
 
+
+        superStr.append(1).append('a').append("hello");
+        System.out.println(superStr.toString());
     }
 
 }
