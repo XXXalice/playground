@@ -40,7 +40,7 @@ public class RandomWordMaker {
      */
     public String makeToken() {
         Random rnd = new Random();
-        StringBuffer sb = new StringBuffer();
+        StringBuilder sb = new StringBuilder();
         int rndNum;
         for (int i = 0; i < wordMem.length; i++) {
             rndNum = rnd.nextInt(MAKE_RANGE);
