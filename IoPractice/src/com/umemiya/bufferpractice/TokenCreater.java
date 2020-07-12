@@ -28,10 +28,12 @@ public class TokenCreater {
      */
     public static void main(String[] args) {
         int[] range = new int[10];
-        for (int iter: range) {
+        for (int idx = 0; idx < range.length; idx++) {
             tokenSb.append(tokenizer.makeToken());
+            tokens.put(idx, tokenSb.toString());
             tokenSb.setLength(0);
         }
 
+        System.out.println(tokens);
     }
 }
