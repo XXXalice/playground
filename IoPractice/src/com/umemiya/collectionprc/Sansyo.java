@@ -15,5 +15,8 @@ public class Sansyo {
         animal.age = 10;
 
         List<Animal> animalList = new ArrayList<>();
+        animalList.add(animal);
+        animal.name = "altanative_cat";
+        System.out.println(animalList.get(0).name);
     }
 }
