@@ -16,7 +16,7 @@ public class Sansyo {
 
         List<Animal> animalList = new ArrayList<>();
         animalList.add(animal);
-        animal.name = "altanative_cat";
+        animal.name = "alternative_cat";
         System.out.println(animalList.get(0).name);
     }
 }
