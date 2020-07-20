@@ -8,6 +8,10 @@ class Animal {
     public int age;
 }
 
+/**
+ * コレクションへ格納が終わった変数のインスタンスの中身を書き換えると、
+ * コレクションに格納済みの要素の中身も書き換わってしまう
+ */
 public class Sansyo {
     public static void main(String[] args) {
         Animal animal = new Animal();
