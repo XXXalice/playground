@@ -15,8 +15,12 @@ public class Sansyo {
         animal.age = 10;
 
         List<Animal> animalList = new ArrayList<>();
+        // コピーしているわけではなく、animalのポインタが格納される
         animalList.add(animal);
+        // 同一の参照
         animal.name = "alternative_cat";
+
+        // 同一の参照
         System.out.println(animalList.get(0).name);
     }
 }
