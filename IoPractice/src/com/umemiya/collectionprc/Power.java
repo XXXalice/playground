@@ -20,5 +20,18 @@ public class Power {
         Hero h2 = new Hero("jiro", 3);
         heroes.put(h1, 10);
         heroes.put(h2, 20);
+
+        for ( Hero hero : heroes.keySet()) {
+            StringBuffer sb = new StringBuffer();
+            sb.append(hero.name);
+            sb.append("さんのlevelは");
+            sb.append(hero.level);
+            sb.append("です");
+            sb.append("\n");
+            sb.append("倒した数は");
+            sb.append(heroes.get(hero));
+            sb.append("です");
+            System.out.println(sb.toString());
+        }
     }
 }
