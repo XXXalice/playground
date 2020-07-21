@@ -4,9 +4,7 @@ package com.umemiya.collectionprc;
  * 自作クラスの等価比較
  */
 public class Account {
-    public static void main(String[] args) {
-        String accountNo;
-    }
+    String accountNo;
 
     @Override
     public boolean equals(Object obj) {
