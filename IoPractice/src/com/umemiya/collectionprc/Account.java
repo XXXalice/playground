@@ -10,6 +10,12 @@ public class Account implements Comparable<Account> {
     String accountNo;
     int number;
 
+    /**
+     * equalsのOverride
+     *
+     * @param obj
+     * @return
+     */
     @Override
     public boolean equals(Object obj) {
         // 自身が引数として渡されて来た場合、無条件でtrueを返す
@@ -25,6 +31,12 @@ public class Account implements Comparable<Account> {
         return true;
     }
 
+    /**
+     * 自然順序づけ
+     *
+     * @param obj
+     * @return
+     */
     public int compareTo(Account obj) {
         if (this.number < obj.number) {
             return -1;
