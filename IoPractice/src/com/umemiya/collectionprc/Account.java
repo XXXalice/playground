@@ -3,6 +3,8 @@ package com.umemiya.collectionprc;
 /**
  * 自作クラスの等価比較
  *
+ * 自然順序づけをするにはComparable<T>を実装する
+ * compareToメソッドを入れると自然順序をJVMに命令できる
  */
 public class Account implements Comparable<Account> {
     String accountNo;
