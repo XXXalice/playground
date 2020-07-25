@@ -38,9 +38,12 @@ public class Account implements Comparable<Account> {
      * @return
      */
     public int compareTo(Account obj) {
+        // 自身よりobj（引数）の方が大き場合：負数
         if (this.number < obj.number) {
             return -1;
-        } else {
+        }
+        // 自身の方がobj（引数）より小さい場合：整数
+        else {
             return 1;
         }
         // return 0;
