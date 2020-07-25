@@ -2,10 +2,20 @@ package com.umemiya.collectionprc;
 
 /**
  * 自作クラスの等価比較
+ *
+ * 自然順序づけをするにはComparable<T>を実装する
+ * compareToメソッドを入れると自然順序をJVMに命令できる
  */
-public class Account {
+public class Account implements Comparable<Account> {
     String accountNo;
+    int number;
 
+    /**
+     * equalsのOverride
+     *
+     * @param obj
+     * @return
+     */
     @Override
     public boolean equals(Object obj) {
         // 自身が引数として渡されて来た場合、無条件でtrueを返す
@@ -19,5 +29,24 @@ public class Account {
             return false;
         }
         return true;
+    }
+
+    /**
+     * 自然順序づけ
+     *
+     * @param obj
+     * @return
+     */
+    public int compareTo(Account obj) {
+        // 自身よりobj（引数）の方が大き場合：負数
+        if (this.number < obj.number) {
+            return -1;
+        }
+        // 自身の方がobj（引数）より小さい場合：整数
+        if (this.number > obj.number) {
+            return 1;
+        }
+        // 同等の場合：0
+        return 0;
     }
 }
