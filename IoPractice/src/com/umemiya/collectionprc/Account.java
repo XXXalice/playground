@@ -3,7 +3,7 @@ package com.umemiya.collectionprc;
 /**
  * 自作クラスの等価比較
  */
-public class Account {
+public class Account implements Comparable<Account> {
     String accountNo;
     int number;
 
@@ -20,5 +20,9 @@ public class Account {
             return false;
         }
         return true;
+    }
+
+    public int compareTo(Account obj) {
+
     }
 }
