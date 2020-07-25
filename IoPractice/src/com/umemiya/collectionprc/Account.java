@@ -2,6 +2,7 @@ package com.umemiya.collectionprc;
 
 /**
  * 自作クラスの等価比較
+ *
  */
 public class Account implements Comparable<Account> {
     String accountNo;
@@ -23,6 +24,11 @@ public class Account implements Comparable<Account> {
     }
 
     public int compareTo(Account obj) {
-
+        if (this.number < obj.number) {
+            return -1;
+        } else {
+            return 1;
+        }
+        // return 0;
     }
 }
