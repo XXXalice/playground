@@ -5,6 +5,7 @@ package com.umemiya.collectionprc;
  */
 public class Account {
     String accountNo;
+    int number;
 
     @Override
     public boolean equals(Object obj) {
