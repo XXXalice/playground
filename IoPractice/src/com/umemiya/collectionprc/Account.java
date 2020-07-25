@@ -5,6 +5,8 @@ package com.umemiya.collectionprc;
  *
  * 自然順序づけをするにはComparable<T>を実装する
  * compareToメソッドを入れると自然順序をJVMに命令できる
+ * TreeSetのような順番を入れ替えながら要素を格納するコレクション型であるため
+ * 入れるオブジェクトのComparableが適切に実装されているかが大切
  */
 public class Account implements Comparable<Account> {
     String accountNo;
