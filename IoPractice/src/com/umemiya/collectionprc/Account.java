@@ -43,9 +43,10 @@ public class Account implements Comparable<Account> {
             return -1;
         }
         // 自身の方がobj（引数）より小さい場合：整数
-        else {
+        if (this.number > obj.number) {
             return 1;
         }
-        // return 0;
+        // 同等の場合：0
+        return 0;
     }
 }
