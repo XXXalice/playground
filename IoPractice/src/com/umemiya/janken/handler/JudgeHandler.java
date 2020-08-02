@@ -18,10 +18,21 @@ public class JudgeHandler {
             if (cHand == PAPER) return -1;
             if (cHand == SCISSORS) return 1;
         } else if (pHand == PAPER) {
-
+            if (cHand == ROCK) return 1;
+            if (cHand == PAPER) return 0;
+            if (cHand == SCISSORS) return -1;
         } else if (pHand == SCISSORS) {
-
+            if (cHand == ROCK) return -1;
+            if (cHand == PAPER) return 1;
+            if (cHand == SCISSORS) return 0;
         }
         return 0;
     }
+
+    private void calcJudge(int judge) {
+        if (judge == 0) System.out.println("あいこ");
+        if (judge > 0) System.out.println("かち");
+        if (judge < 0) System.out.println("まけ");
+    }
+
 }
