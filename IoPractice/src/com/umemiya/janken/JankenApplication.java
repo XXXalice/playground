@@ -11,6 +11,6 @@ public class JankenApplication {
         JudgeHandler judgeHandler = new JudgeHandler();
         Hands pHands = PAPER;
         Hands cHands = ROCK;
-
+        judgeHandler.judge(pHands, cHands);
     }
 }

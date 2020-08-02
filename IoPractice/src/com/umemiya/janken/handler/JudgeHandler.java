@@ -12,7 +12,7 @@ public class JudgeHandler {
      * @param cHand 相手の手
      * @return int -1: lose 0: draw 1: win
      */
-    private int judge(Hands pHand, Hands cHand) {
+    public int judge(Hands pHand, Hands cHand) {
         if (pHand == ROCK) {
             if (cHand == ROCK) return 0;
             if (cHand == PAPER) return -1;
@@ -29,7 +29,7 @@ public class JudgeHandler {
         return 0;
     }
 
-    private void calcJudge(int judge) {
+    public void calcJudge(int judge) {
         if (judge == 0) System.out.println("あいこ");
         if (judge > 0) System.out.println("かち");
         if (judge < 0) System.out.println("まけ");
