@@ -9,8 +9,10 @@ public class JankenApplication {
 
     public static void main(String[] args) {
         JudgeHandler judgeHandler = new JudgeHandler();
+        int result = 0;
         Hands pHands = PAPER;
         Hands cHands = ROCK;
-        judgeHandler.judge(pHands, cHands);
+        result = judgeHandler.judge(pHands, cHands);
+        judgeHandler.calcJudge(result);
     }
 }
