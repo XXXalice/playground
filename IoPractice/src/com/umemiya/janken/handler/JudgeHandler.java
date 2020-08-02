@@ -29,5 +29,10 @@ public class JudgeHandler {
         return 0;
     }
 
+    private void calcJudge(int judge) {
+        if (judge == 0) System.out.println("あいこ");
+        if (judge > 0) System.out.println("かち");
+        if (judge < 0) System.out.println("まけ");
+    }
 
 }
