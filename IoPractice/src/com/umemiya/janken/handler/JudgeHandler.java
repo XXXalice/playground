@@ -22,8 +22,12 @@ public class JudgeHandler {
             if (cHand == PAPER) return 0;
             if (cHand == SCISSORS) return -1;
         } else if (pHand == SCISSORS) {
-
+            if (cHand == ROCK) return -1;
+            if (cHand == PAPER) return 1;
+            if (cHand == SCISSORS) return 0;
         }
         return 0;
     }
+
+
 }
