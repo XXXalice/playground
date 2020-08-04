@@ -14,6 +14,7 @@ public class Outer2 {
             public void innerMethod() {
                 System.out.println("innerMethodです");
                 System.out.println(outerMember);
+                System.out.println(a); // <- 暗黙のfinalなので利用できてしまう
             }
         }
         Inner ic = new Inner();
