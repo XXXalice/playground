@@ -21,10 +21,6 @@ public class Outer {
     void outerMethod() {
         Inner ic = new Inner();
     }
-
-    public static int getOuterStaticField() {
-        return outerStaticField;
-    }
 }
 
 class Main {
