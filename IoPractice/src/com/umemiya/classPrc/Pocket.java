@@ -4,7 +4,7 @@ import com.umemiya.box.KeyType;
 
 public class Pocket<E> {
     /**
-     * その他の型
+     * 金庫に格納するアイテム
      */
     private E item;
     /**
@@ -43,7 +43,6 @@ public class Pocket<E> {
 
     public E getItem() {
         this.count++;
-
         return item;
     }
 
