@@ -52,7 +52,11 @@ public class Pocket<E> {
 
     public E getItem() {
         this.count++;
-        return item;
+        if (isOpen(this.count)) {
+            return this.item;
+        } else {
+            return null;
+        }
     }
 
     public void setItem(E item) {
