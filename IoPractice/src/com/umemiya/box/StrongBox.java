@@ -9,11 +9,11 @@ package com.umemiya.box;
 public class StrongBox<E> {
     private E item;
 
-    public E getItem() {
+    public E get() {
         return item;
     }
 
-    public void setItem(E item) {
+    public void put(E item) {
         this.item = item;
     }
 }
