@@ -16,9 +16,24 @@ public class Pocket<E> {
      */
     private long count = 0;
 
+    /**
+     * 南京錠
+     */
     private final long PADLOCK_COUNT = 1024;
+
+    /**
+     * 押しボタン式
+     */
     private final long BUTTON = 10000;
+
+    /**
+     * ダイヤル式
+     */
     private final long DIAL = 30000;
+
+    /**
+     * 指紋認証
+     */
     private final long FINGER = 1000000;
 
 
