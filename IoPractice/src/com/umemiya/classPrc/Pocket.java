@@ -11,6 +11,11 @@ public class Pocket<E> {
      * キータイプ
      */
     private KeyType keyType;
+
+    /**
+     * キー解除の必要カウント
+     */
+    private long needCount;
     /**
      * キー解除のカウント
      */
@@ -39,6 +44,10 @@ public class Pocket<E> {
 
     public Pocket(KeyType keyType) {
         this.keyType = keyType;
+        if (keyType == KeyType.PADLOCK) this.needCount = PADLOCK_COUNT;
+        if (keyType == KeyType.BUTTON) this.needCount = BUTTON;
+        if (keyType == KeyType.DIAL) this.needCount = DIAL;
+        if (keyType == KeyType.FINGER) this.needCount = FINGER;
     }
 
     public E getItem() {
@@ -48,5 +57,15 @@ public class Pocket<E> {
 
     public void setItem(E item) {
         this.item = item;
+    }
+
+    /**
+     * 空いているか空いていないか
+     *
+     * @param count 試行回数
+     * @return true: 空いた false: 空いてない
+     */
+    private boolean isOpen(long count) {
+        return count >= this.needCount;
     }
 }
