@@ -18,6 +18,7 @@ public class FuncInVariable {
     }
     public static void main(String[] args) {
         // 代入を行なっている
+        // 実態はメソッドが入っているわけではなくsub()メソッドのメモリ番地が代入されている
         IntBinaryOperator func = FuncInVariable::sub;
         int a = func.applyAsInt(5, 3);
         System.out.println(a);
