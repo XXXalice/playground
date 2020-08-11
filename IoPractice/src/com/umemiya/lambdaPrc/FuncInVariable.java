@@ -1,5 +1,7 @@
 package com.umemiya.lambdaPrc;
 
+import java.util.function.IntBinaryOperator;
+
 /**
  * 関数を代入する
  */
@@ -15,6 +17,9 @@ public class FuncInVariable {
         return a - b;
     }
     public static void main(String[] args) {
-
+        // 代入を行なっている
+        IntBinaryOperator func = FuncInVariable::sub;
+        int a = func.applyAsInt(5, 3);
+        System.out.println(a);
     }
 }
