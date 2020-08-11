@@ -50,6 +50,10 @@ public class Pocket<E> {
         if (keyType == KeyType.FINGER) this.needCount = FINGER;
     }
 
+    public Pocket() {
+
+    }
+
     public E getItem() {
         this.count++;
         if (isOpen(this.count)) {
