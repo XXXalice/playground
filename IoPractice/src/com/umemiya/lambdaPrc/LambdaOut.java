@@ -6,7 +6,7 @@ public class LambdaOut {
     public static void main(String[] args) {
         // bは実質的にfinalな変数である必要がある
         // ラムダ内部で書き換えることができない
-        double b = 3.14;
+        double b = Math.PI;
 
         IntToDoubleFunction getCircle = (x) -> {
             return x * x * b;
