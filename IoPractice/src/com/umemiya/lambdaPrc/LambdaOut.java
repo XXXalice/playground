@@ -11,5 +11,6 @@ public class LambdaOut {
         IntToDoubleFunction getCircle = (x) -> {
             return x * x * b;
         };
+        System.out.println(getCircle.applyAsDouble(1));
     }
 }
