@@ -11,7 +11,7 @@ public class StreamPrc {
         for (Integer i : numList) {
             numList2.add(i * 2);
         }
-        numList2.stream().forEach(i -> {
+        numList2.forEach(i -> {
             System.out.println(i);
         });
     }
