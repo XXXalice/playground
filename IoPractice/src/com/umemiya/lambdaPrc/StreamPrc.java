@@ -14,5 +14,10 @@ public class StreamPrc {
         numList2.forEach(i -> {
             System.out.println(i);
         });
+
+        List<Character> charList = new ArrayList<>(Arrays.asList('a', 'b', 'c'));
+        charList.stream()
+                .map(character -> character.equals('a') ? 'o' : 'x')
+                .forEach(character -> System.out.println(character));
     }
 }
