@@ -7,6 +7,9 @@ import java.util.List;
 public class StreamPrc {
     public static void main(String[] args) {
         List<Integer> numList = Arrays.asList(1, 2, 3);
-
+        List<Integer> numList2 = new ArrayList<>();
+        for (Integer i : numList) {
+            numList2.add(i * 2);
+        }
     }
 }
