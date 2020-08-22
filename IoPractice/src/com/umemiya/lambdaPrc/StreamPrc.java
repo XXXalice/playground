@@ -11,8 +11,13 @@ public class StreamPrc {
         for (Integer i : numList) {
             numList2.add(i * 2);
         }
-        numList2.stream().forEach(i -> {
+        numList2.forEach(i -> {
             System.out.println(i);
         });
+
+        List<Character> charList = new ArrayList<>(Arrays.asList('a', 'b', 'c'));
+        charList.stream()
+                .map(character -> character.equals('a') ? 'o' : 'x')
+                .forEach(character -> System.out.println(character));
     }
 }
