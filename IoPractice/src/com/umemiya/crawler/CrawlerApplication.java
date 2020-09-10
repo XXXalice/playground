@@ -5,10 +5,10 @@ import com.umemiya.crawler.domain.Param;
 public class CrawlerApplication {
 
     public static void main(String[] args) {
-
+        System.out.println("main");
     }
 
-    private Param readParam() {
+    private void readParam() {
         System.exit(1);
     }
 }
